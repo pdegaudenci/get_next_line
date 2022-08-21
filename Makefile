@@ -31,6 +31,6 @@ fclean : clean
 bonus: $(NAME)
 
 test:
-	$(CC) $(SRCS) prueba.c
+	$(CC) $(FLAGS) $(SRCS) prueba.c
 	
 re : fclean all

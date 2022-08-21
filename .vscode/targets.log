@@ -6,13 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Sat Aug 20 19:26:06 2022
+# Make data base, printed on Sun Aug 21 16:34:25 2022
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -34,7 +32,7 @@ SHELL = /bin/sh
 # makefile (from `Makefile', line 7)
 SURPL_O = get_next_line.o get_next_line_utils.o
 # environment
-VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -46,11 +44,11 @@ VSCODE_VERBOSE_LOGGING = true
 # makefile (from `Makefile', line 15)
 OBJS = $(SRCS:.c=.o)
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n0000spr0006dp/T/vscode-ipc-800e5122-8bcd-4ca6-9bbd-f45a21a8634b.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n0000spr0006dp/T/vscode-ipc-630c9f6c-67d3-4269-9b2f-6c920b925a90.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.OJtieWMZMc/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.TYUmwzsPXX/Render
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands
 # environment
@@ -60,7 +58,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.pMSHAxnbIx/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.RVTrx1p2MZ/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -124,23 +122,19 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000003.Electron
+XPC_SERVICE_NAME = com.microsoft.VSCode.1244
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0x19B6:0x0:0x8
-# environment
-COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
@@ -152,9 +146,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1889
+VSCODE_PID = 59776
 # variable set hash-table stats:
-# Load=70/1024=7%, Rehash=0, Collisions=5/103=5%
+# Load=68/1024=7%, Rehash=0, Collisions=5/101=5%
 
 # Pattern-specific Variable Values
 
@@ -162,9 +156,9 @@ VSCODE_PID = 1889
 
 # Directories
 
-# . (device 16777227, inode 831998): 8 files, no impossibilities.
+# . (device 16777227, inode 831998): 14 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -189,7 +183,7 @@ all: libget_next_linea.a
 # Not a target:
 get_next_line.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-20 17:46:29
+#  Last modified 2022-08-21 16:29:08
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -204,7 +198,7 @@ get_next_line.c:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-20 17:46:30
+#  Last modified 2022-08-21 15:44:15
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -215,7 +209,7 @@ test:
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 34):
-	$(CC) $(SRCS) prueba.c
+	$(CC) $(FLAGS) $(SRCS) prueba.c
 	
 
 bonus: libget_next_linea.a
@@ -291,7 +285,6 @@ get_next_line.o: get_next_line.c
 # automatic
 # ? := get_next_line.c
 # variable set hash-table stats:
- 
 # Load=8/32=25%, Rehash=0, Collisions=1/14=7%
 #  commands to execute (from `Makefile', line 18):
 	$(CC) $(F) -c $< -o $@
@@ -310,6 +303,6 @@ get_next_line.o: get_next_line.c
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Aug 20 19:26:06 2022
+# Finished Make data base on Sun Aug 21 16:34:25 2022
 
  
