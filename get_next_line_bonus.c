@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdegaude <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 15:45:14 by pdegaude          #+#    #+#             */
-/*   Updated: 2022/08/27 15:45:43 by pdegaude         ###   ########.fr       */
+/*   Created: 2022/08/27 17:16:19 by pdegaude          #+#    #+#             */
+/*   Updated: 2022/08/27 17:16:32 by pdegaude         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_get_line(char *buffer)
 {
@@ -75,7 +75,7 @@ char	*ft_create_buffer(int fd, char *buffer)
 	if (!buffer_temp)
 		return (NULL);
 	bytes = 1;
-	while (!ft_strchr(buffer, '\n') && bytes > 0)
+	while (!ft_strchr(buffer, '\n') && bytes != 0)
 	{
 		bytes = read(fd, buffer_temp, BUFFER_SIZE);
 		if (bytes == -1)
@@ -93,14 +93,14 @@ char	*ft_create_buffer(int fd, char *buffer)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*buffer;
+	static char	*buffer[256];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
 		return (NULL);
-	buffer = ft_create_buffer(fd, buffer);
-	if (!buffer)
+	buffer[fd] = ft_create_buffer(fd, buffer[fd]);
+	if (!buffer[fd])
 		return (NULL);
-	line = ft_get_line(buffer);
-	buffer = ft_read_line(buffer);
+	line = ft_get_line(buffer[fd]);
+	buffer[fd] = ft_read_line(buffer[fd]);
 	return (line);
 }

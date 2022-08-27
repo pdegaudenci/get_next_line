@@ -5,7 +5,7 @@ gnlTester/
 ### C ###
 # Prerequisites
 *.d
-
+prueba.c
 # Object files
 *.o
 *.ko

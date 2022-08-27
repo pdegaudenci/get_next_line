@@ -1,7 +1,10 @@
 NAME = libget_next_linea.a
 
 SRCS =  get_next_line.c \
-		get_next_line_utils.c
+		get_next_line_utils.c \
+		get_next_line_bonus.c \
+		get_next_line_utils_bonus.c
+
 
 			
 SURPL_O = 	get_next_line.o \
@@ -10,7 +13,7 @@ CC = gcc
 
 F = -Wall -Wextra -Werror -fsanitize=address
 
-INCLUDES = -I get_next_line.h
+INCLUDES = -I get_next_line.h get_next_line_bonus.h
 
 OBJS = $(SRCS:.c=.o)
 
