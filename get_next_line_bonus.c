@@ -40,7 +40,7 @@ char	*ft_get_line(char *buffer)
 	return (temp);
 }
 
-char	*ft_read_line(char *buffer)
+char	*ft_save_newbuffer(char *buffer)
 {
 	int		i;
 	int		j;
@@ -101,6 +101,6 @@ char	*get_next_line(int fd)
 	if (!buffer[fd])
 		return (NULL);
 	line = ft_get_line(buffer[fd]);
-	buffer[fd] = ft_read_line(buffer[fd]);
+	buffer[fd] = ft_save_newbuffer(buffer[fd]);
 	return (line);
 }

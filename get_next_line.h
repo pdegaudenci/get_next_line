@@ -27,5 +27,5 @@ char	*ft_strdup(const char *src);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlen(const char *theString);
 char	*ft_create_buffer(int fd, char *buffer);
-char	*ft_read_line(char *buffer);
+char	*ft_save_newbuffer(char *buffer);
 #endif
