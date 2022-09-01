@@ -95,7 +95,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	static char	*buffer[256];
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 300)
 		return (NULL);
 	buffer[fd] = ft_create_buffer(fd, buffer[fd]);
 	if (!buffer[fd])
